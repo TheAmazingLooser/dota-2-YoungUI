@@ -135,7 +135,7 @@ end
 function YoungUi:_Delete(__LuaDelete)
 	if #self.Childs > 0 then
 		for i = 1, #self.Childs do
-			self.Childs[i]:Delete(true)
+			self.Childs[i]:_Delete(true)
 		end
 	end
 	if self.Parent then
