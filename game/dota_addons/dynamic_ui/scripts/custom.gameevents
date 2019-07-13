@@ -1,0 +1,81 @@
+// No spaces in event names, max length 32
+// All strings are case sensitive
+//
+// valid data key types are:
+//   string : a zero terminated string
+//   bool   : unsigned int, 1 bit
+//   byte   : unsigned int, 8 bit
+//   short  : signed int, 16 bit
+//   long   : signed int, 32 bit
+//   float  : float, 32 bit
+//   uint64 : unsigned int 64 bit
+//   local  : any data, but not networked to clients
+//
+// following key names are reserved:
+//   local      : if set to 1, event is not networked to clients
+//   unreliable : networked, but unreliable
+//   suppress   : never fire this event
+//   time		: firing server time
+//   eventid	: holds the event ID
+
+"CustomEvents"
+{
+	"young_ui_create_panel"
+	{
+		"parent"					"string"
+		"type"						"string"
+		"id"						"string"
+	}
+	"young_ui_delete_panel"
+	{
+		"id"						"string"
+	}
+	"young_ui_set_panel_class"
+	{
+		"id"						"string"
+		"class_name"				"string"
+	}
+	"young_ui_remove_panel_class"
+	{
+		"id"						"string"
+		"class_name"				"string"
+	}
+	"young_ui_set_style_attribute"
+	{
+		"id"						"string"
+		"attribute_name"			"string"
+		"attribute_value"			"string"
+	}
+	"young_ui_set_attribute"
+	{
+		"id"						"string"
+		"attribute_name"			"string"
+		"attribute_value"			"string"
+	}
+	"young_ui_hud_loaded"
+	{
+		"player_id"	"short"
+	}
+	"young_ui_register_event"
+	{
+		"id"						"string"
+		"event_name"				"string"
+		"manager_event_name"		"string"
+	}
+	"young_ui_event"
+	{
+		"event_name"				"string"
+	}
+
+	"test_event"
+	{
+		"test"	"string"
+	}
+}
+
+
+
+//CreateEvent: event 'young_ui_set_attribute' not registered.
+//CreateEvent: event 'young_ui_register_event' not registered.
+//CGameEventManager::AddListener: event '_9a31_Button' unknown.
+//CreateEvent: event 'young_ui_set_style_attribute' not registered.
